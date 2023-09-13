@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    calculate
+{% endblock %}
+
+{% block main %}
+        <h3 style="color: white">Your Matrix</h3>
+        <div class="div-table">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th></th>
+                        {% for i in range(cols - 1) %}
+                            <th>x<span>{{ i + 1 }}</span></th>
+                        {% endfor %}
+                        <th>b</th>
+                    </tr>
+                    {% for i in A %}
+                         {% set row = loop.index %}
+                        <tr>
+                            <th>{{ row }}</th>
+                            {% for j in i %}
+                                {% set col = loop.index %}
+                                <td title="[{{ row }},{{ col }}]">{{ j }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div style="display: flex; justify-content: center;">
+           <form method="post" action="/solution" style="padding-right: 15px">
+                <input type="submit" value="Confirm" class="submit">
+            </form>
+
+            <form method="post" action="/edit">
+                <input type="submit" value="Edit" class="submit">
+            </form>
+        </div>
+{% endblock %}

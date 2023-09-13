@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    calculate
+{% endblock %}
+
+{% block main %}
+    <form method="post" action="/add_matrix">
+        <div class="div-table">
+            <table class="table">
+            <tbody>
+                <tr>
+                    <th></th>
+                    {% for i in range(cols - 1) %}
+                        <th>x<span>{{ i + 1 }}</span></th>
+                    {% endfor %}
+                    <th>b</th>
+                </tr>
+                {% for i in A %}
+                    {% set row = loop.index - 1 %}
+                    <tr>
+                        <th>{{ row }}</th>
+                        {% for j in i %}
+                            {% set col = loop.index - 1 %}
+                            <td>
+                                <input required type="text" value="{{ j }}" size="4" autocomplete="off" name="r{{ row.__str__() }}_c{{ col.__str__() }}" title="[{{ i }}][{{ j }}]" class="inputCell">
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        <input type="submit" value="Submit" class="submit">
+    </form>
+{% endblock %}

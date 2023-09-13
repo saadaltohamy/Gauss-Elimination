@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    calculate
+{% endblock %}
+
+{% block main %}
+    <div class="inputs_div">
+        <form class="inputs_form" method="post" action="/">
+            <div class="inputs_values">
+                <h3>Number of equations:</h3>
+                <input required name="equations" class="asSelect" title="rows" class="asSelect " type="number" pattern="[0-9]*" inputmode="numeric" value="2" min="2" max="98" step="1">
+            </div>
+            <div class="inputs_values">
+                <h3>Number of variables:</h3>
+                <input required name="variables" class="asSelect" title="cols" class="asSelect " type="number" pattern="[0-9]*" inputmode="numeric" value="2" min="2" max="98" step="1">
+            </div>
+            <input class="submit" type="submit" value="Submit">
+        </form>
+    </div>
+{% endblock %}

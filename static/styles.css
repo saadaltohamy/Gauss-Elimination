@@ -1,0 +1,160 @@
+*
+{
+    font-family: 'Cairo', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+
+}
+body{
+    background-color: rgb(66,65,67);
+    text-align: center;
+    align-items: center;
+}
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(66,65,67);
+    color: white;
+    padding: 3px 15px;
+    border-top:solid rgb(39, 121, 131) 5px;
+    width: 100%;
+    z-index: 999;
+}
+header a
+{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: ease 0.3s;
+    font-size: 17px;
+}
+header a:hover
+{
+    color: black;
+    font-size: 19px;
+}
+
+.inputs_div
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.4);
+    background-color: rgb(66,65,67);
+    padding: 20px 0px;
+}
+.inputs_form
+{
+    padding: 10px;
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.4);
+
+}
+.inputs_values{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+.inputs_values h3
+{
+    color: white;
+    margin-right: 5px;
+}
+.inputs_values input
+{
+    padding-left: 5px;
+    text-align: center;
+}
+.asSelect
+{
+    padding: 6px 0 6px 10px;
+    width: 40px;
+    font-size: 14px;
+}
+.asSelect, select
+{
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 3px;
+    cursor: pointer;
+}
+.submit
+{
+    padding: 5px;
+    color: white;
+    background-color: #3a3737;
+    border-radius: 10px;
+}
+.inputCell
+{
+    text-align: center;
+    background-color: #fff;
+    width: 40px;
+    font-size: 13px;
+}
+.div-table
+{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+.table
+{
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+    width: 25%;
+    border: solid gray;
+    color: white;
+}
+.table th
+{
+    background-color: #3a3737;
+    border-bottom: solid black;
+}
+.steps
+{
+    text-align: center;
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.4);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.centeredTable
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.solution_table
+{
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+    width: 25%;
+    border: solid gray;
+    color: white;
+}
+.solution_table th
+{
+    background-color: #3a3737;
+    border-bottom: solid black;
+}
+.article
+{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
